@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid</title>
+  <style>
+    .grid-container{
+      width: 500px; 
+      margin: 0 auto;
+      display: grid;
+      grid-template-areas:
+      "grid1 grid2 grid2 grid3 grid3"
+      "grid4 grid2 grid2 grid5 grid5"
+      "grid6 grid7 grid8 grid9 grid10";
+      gap: 10px;
+    }
+    .grid-item{
+      width:100%;
+      background-color: red;
+    }
+    .grid-item:nth-child(2n){
+      background-color: #bd4242;
+    }
+    .item1{
+        grid-area: grid1;
+        width: 94px;
+        height: 100px;
+    }
+    .item2{
+        grid-area: grid2;
+        width: 194px;
+        height: 210px;
+    }
+    .item3{
+        grid-area: grid3;
+        width: 194px;
+        height: 100px;
+    }
+    .item4{
+        grid-area: grid4;
+        width:94px;
+        height: 100px;
+    }
+    .item5{
+        grid-area: grid5;
+        width:194px;
+        height:100px
+    }
+    .item6{
+        grid-area: grid6;
+        width: 94px;
+        height: 100px;
+    }
+    .item7{
+        grid-area: grid7;
+        width: 94px;
+        height: 100px;
+    }
+    .item8{
+        grid-area: grid8;
+        width: 94px;
+        height: 100px;
+    }
+    .item9{
+        grid-area: grid9;
+        width: 94px;
+        height: 100px;
+    }
+    .item10{
+        grid-area: grid10;
+        width: 94px;
+        height: 100px;
+    }
+  </style>
+</head>
+<body>
+  <div class="grid-container">
+    <div class="grid-item item1">1</div>
+    <div class="grid-item item2">2</div>
+    <div class="grid-item item3">3</div>
+    <div class="grid-item item4">4</div>
+    <div class="grid-item item5">5</div>
+    <div class="grid-item item6">6</div>
+    <div class="grid-item item7">7</div>
+    <div class="grid-item item8">8</div>
+    <div class="grid-item item9">9</div>
+    <div class="grid-item item10">10</div>
+  </div>
+</body>
+</html>

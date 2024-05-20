@@ -1,0 +1,20 @@
+.flex-container {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    /* 자식들이 부모 넓이를 초과할 때 어떻게 할지 nowrap이 기본값이고
+        한줄로 쭉 나열(부모 넓이 초과해도), 반면에 wrap는 부모의 넓이를 초과하면
+         다음 줄로 내려간다. */
+    /* flex-wrap: nowrap; 기본값. item들이 container를 넘어가면 그냥 넘어감 */
+    /* flex-wrap: wrap; item들이 container를 넘어가면 container 범위 안에서 작아지고 아랫줄로 내려감 */
+    flex-wrap: wrap; 
+    border: 3px solid red;
+}
+.flex-item {
+    color: white;
+    background-color: violet;
+}
+/* 짝수 번째 아이템의 배경색을 변경 */
+.flex-item:nth-child(2n) {
+    background-color: rgb(2, 150, 155);
+}

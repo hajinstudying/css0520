@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition Timing Duration</title>
+    <style>
+        .container {
+            padding: 10px;
+            color: white;
+            border: 1px solid black;
+        }
+        /* transition 전환 효과가 적용되는 요소에 적용할 스타일 */
+        .bar {
+            width: 100px;
+            background-color: red;
+            transition-property: width;
+            /* 너비 속성에만 트랜지션을 적용 */
+            transition-duration: 2s;
+            /* 2초동안 트랜지션 효과를 유지(작동) */
+            margin: 10px;
+            /* 각각의 bar 사이에 간격을 준다. */
+        }
+
+        .container:hover .bar {
+            /* container에 마우스를 올리면 bar들의 너비가 300으로 증가 */
+            width: 300px;
+        }
+        .bar:nth-child(1) {
+            transition-timing-function: linear;
+        }
+        .bar:nth-child(2) {
+            transition-timing-function: ease;
+        }
+        .bar:nth-child(3) {
+            transition-timing-function: ease-in
+        }
+        .bar:nth-child(4) {
+            transition-timing-function: ease-out;
+        }
+        .bar:nth-child(5) {
+            transition-timing-function: ease-in-out;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Transition timing-function</h2>
+    <div class="container">
+        <div class="bar">liner</div>
+        <div class="bar">ease</div>
+        <div class="bar">ease-in</div>
+        <div class="bar">ease-out</div>
+        <div class="bar">eases-in-out</div>
+    </div>
+</body>
+
+</html>

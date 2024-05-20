@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN</title>
+    <style>
+        body{
+            height: 100px;
+        }
+        img {
+            width: 40px;
+            vertical-align: middle;
+            /* 이미지 수직정렬 시켜야 텍스트 수직정렬됨; */
+        }
+
+        #container {
+            border: 2px solid black;
+            /* 테두리 */
+            width: 550px;
+            /* 너비 */
+            height: 400px;
+            /* 높이 */
+            text-align: center;
+            /* 텍스트 중앙정렬 */
+            padding: 10px;
+            /* 안쪽 여백 */
+            margin: auto;
+            /* 가운데 정렬 */
+        }
+
+        #logoBtn {
+            height: 55px !important;
+            /* 높이 */
+            width: 500px;
+            /* 너비 */
+
+        }
+
+        #or { /* 여백공간 */
+            height: 90px;
+            line-height: 90px;
+            font-size: 30px;
+
+        }
+
+        #id, #pw, #submit, #logoBtn {
+            /* 테두리, 글자크기, 마진 공통설정 */
+            border-radius: 7px;
+            border: 2px solid gray;
+            font-size: 25px;
+            height: 43px;
+            margin: 10px
+        }
+
+        #id, #pw {
+            width: 492px;
+        }
+
+        #submit {
+            width: 500px;
+        }
+
+        #link {
+            font-size: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <form>
+            <div id="container">
+                <button type="button" id="logoBtn">
+                    <img src="../images/googleLogo.png" alt="구글 로고">
+                    Log in with Google
+                </button>
+                <div id="or">
+                    or
+                </div>
+                <div>
+                    <input type="text" id="id" name="id" placeholder="Username" width="100">
+                </div>
+                <div>
+                    <input type="password" id="pw" name="pw" placeholder="Password">
+                </div>
+                <div>
+                    <button type="submit" id="submit">LOGIN</button> <!--id 넣으면 버튼이 안눌림;;-->
+                </div>
+                <div id="link">
+                    <a href="#">Forgot your password?</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
