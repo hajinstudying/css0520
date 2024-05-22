@@ -70,13 +70,14 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            
         }
+
         /* 메인 안의 사이드바 스타일 */
         aside {
             width: 30%;
             height: 100%;
             display: flex;
+            float: left;
             justify-content: space-around;
             align-items: center;
             flex-shrink: 0; /* 메인 섹션때문에 좁아지지 않도록 */
@@ -102,6 +103,10 @@
         }
 
         /* 메인 안의 article 컨텐츠 스타일 */
+        section {
+            position: relative;
+            margin-left: 30%;
+        }
         section ul {
             list-style: none;
             margin: 0;
@@ -114,9 +119,21 @@
             border: 1px solid gray;
             border-radius: 10px;
         }
+        section article img:hover {
+            animation-name: bgchange;
+            animation-duration:5s;   
+        }
+        @keyframes bgchange {
+            0%{background-color: transparent;}
+            50%{background-color: green;} /* 50% 시간에 배경색은 green */
+            75%{background-color: yellow;}
+            100%{background-color: red;}
+        }
+      
+
         /* 푸터 스타일 */
         footer {
-            position: relative;
+            /* position: relative; */
             bottom: 0;
             background-color: #F285C1;
             color: white;
@@ -124,6 +141,8 @@
             width: 100%;
             line-height: 50px;
         }
+
+    
     </style>
 </head>
 <body>
@@ -155,17 +174,17 @@
                 <li><article><a href="#" class="grid-item"><img src="../images/icecream1.png" alt="icecream1"></a></article></li>
                 <li><article><a href="#" class="grid-item"><img src="../images/icecream2.png" alt="icecream2"></a></article></li>
                 <li><article><a href="#" class="grid-item"><img src="../images/icecream3.png" alt="icecream3"></a></article></li>
-        </ul>
-        <ul>
-            <li><article><a href="#" class="grid-item"><img src="../images/icecream4.png" alt="icecream4"></a></article></li>
-            <li><article><a href="#" class="grid-item"><img src="../images/icecream5.png" alt="icecream5"></a></article></li>
-            <li><article><a href="#" class="grid-item"><img src="../images/icecream6.png" alt="icecream6"></a></article></li>
-        </ul>
-        <ul>
-            <li><article><a href="#" class="grid-item"><img src="../images/icecream5.png" alt="icecream7"></a></article></li>
-            <li><article><a href="#" class="grid-item"><img src="../images/icecream6.png" alt="icecream8"></a></article></li>
-            <li><article><a href="#" class="grid-item"><img src="../images/icecream7.png" alt="icecream9"></a></article>
-        </ul>
+            </ul>
+            <ul>
+                <li><article><a href="#" class="grid-item"><img src="../images/icecream4.png" alt="icecream4"></a></article></li>
+                <li><article><a href="#" class="grid-item"><img src="../images/icecream5.png" alt="icecream5"></a></article></li>
+                <li><article><a href="#" class="grid-item"><img src="../images/icecream6.png" alt="icecream6"></a></article></li>
+            </ul>
+            <ul>
+                <li><article><a href="#" class="grid-item"><img src="../images/icecream5.png" alt="icecream7"></a></article></li>
+                <li><article><a href="#" class="grid-item"><img src="../images/icecream6.png" alt="icecream8"></a></article></li>
+                <li><article><a href="#" class="grid-item"><img src="../images/icecream7.png" alt="icecream9"></a></article>
+            </ul>
         </section>
     </main>
         <footer>
